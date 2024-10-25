@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-size: 12px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .nav{
+        position: relative;
+    }
+    header .nav ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 25px 40px;
+        font-size: 1.4rem;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    header .nav ul li:first-child{
+        margin-left: 100px;
+    }
+    header .nav div img{
+        position: absolute;
+        top: 12px;
+        left: 15px;
+    }
+    header form{
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+    }
+    header .form .button,.search{ 
+        padding: 8px 30px;
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(207, 207, 207);
+        cursor: pointer;
+    }
+
+    section{
+        position: relative;
+        background-color: #282a35;
+        height: 600px;
+    }
+    .text{
+        position: absolute;
+        left: 140px;
+        top: 100px;
+    }
+    .text h1{
+        font-size: 6.5rem;
+        text-align: center;
+        font-weight: 500;
+        cursor: default;
+    }
+    .text p{
+        font-size: 1.5rem;
+        cursor: default;
+    }
+    .text input{
+        display: block;
+        width: 220px;
+        height: 40px;
+        border-radius: 20px;
+        margin: 30px auto;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+    input:hover{
+        background-color: rgb(19, 18, 18);
+        color: white;
+    }
+    .input-1{
+        background-color: #016e57;
+    }
+    .text-2{
+        position: absolute;
+        right: 100px;
+        top: 70px;
+        background-color: rgb(248, 248, 248);
+        width: 600px;
+        height: 400px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .text-2 h1{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        padding: 10px;
+        cursor: default;
+    }
+    .text-2 .code{
+        height: 250px;
+        padding: 20px;
+        font-size: 1.1rem;
+        background-color: white;
+        border-left: 6px solid #016e57;
+        cursor: default;
+    }
+    .input-2{
+        position: absolute;
+        background-color: #016e57;
+        border: none;
+        font-size: 1rem;
+        font-weight: bolder;
+        border-radius: 20px;
+        padding: 12px 55px;
+        bottom: 20px;
+        left: 10px;
+        cursor: pointer;
+    }
+    .text .input-3{
+        background-color: gray;
+    }
+    .text-5{
+        position: absolute;
+        left: 100px;
+        top: 100px;
+    }
+    .text-5 h1{
+        color: white;
+        font-size: 6.5rem;
+        text-align: center;
+        font-weight: 400;
+    }
+    .text-5 p{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .text-5 input{
+        display: block;
+        width: 220px;
+        height: 40px;
+        border-radius: 20px;
+        margin: 30px auto;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+    #section4{
+        height:700px ;
+    }
+    #section4 div{
+        position: absolute;
+        padding: 40px;
+        width: 500px;
+        height: 250px;
+        border-radius: 5px;
+        cursor: default;
+    }
+    #section4 div span{
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+        padding-bottom: 20px;
+    }
+    #section4 div h1{
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 3rem;
+    }
+    #section4 div input{
+        display: block;
+        background-color: rgb(48, 48, 48);
+        color: white;
+        padding: 10px 50px;
+        border-radius: 20px; 
+        margin: auto;
+        border: none;
+        cursor: pointer;
+    }
+    #section4 div input:hover{
+        background-color: rgb(94, 94, 94);
+    }
+    #section4 div span{
+        margin-bottom: 30px;
+    }
+    #section4 .PHP{
+        background-color: pink;
+        top: 70px;
+        left: 80px;
+    }
+    #section4 .jQuery{
+        background-color: #fff4a3;
+        top: 70px;
+        right: 80px;
+    }
+    #section4 .Java{
+        background-color: rgb(243, 227, 198);
+        left: 80px;
+        top: 370px;
+    }
+    #section4 .Cpp{
+        background-color: rgb(151, 223, 223);
+        top: 370px;
+        right: 80px;
+    }
+    #section5 ul{
+        display: inline-block;
+        list-style: none;
+        margin: 100px;
+    }
+    #section5 ul li{
+        font-size: 1.2rem;
+        color: white;
+        padding-bottom: 5px;
+        cursor: pointer;
+    }
+    #section5 ul li:hover{
+        color: rgb(199, 199, 199);
+    }
+    #section5 ul li:first-child{
+        color: yellow;
+        font-size: 1.4rem;
+        padding-bottom: 20px;
+    }
+    #section5 ul li:first-child:hover{
+        color: rgb(255, 255, 133);
+        transition: ease-in-out 0.5s;
+    }
+</style>
+<body>
+<header>
+<div class="nav">
+        <div>
+          <img src="w3logo.png" alt="">
+        </div>
+       <ul>
+         <li>Tutarials </li>
+         <li>References</li>
+         <li>Exersices</li>
+       </ul>
+    <form action="">
+        <input type="search" placeholder="Search..." class="search">
+    </form>
+</div>
+    </header>
+    <!-- section 1 -->
+    <section>
+        <div class="text">
+            <h1>HTML</h1>
+            <p>The language for buildings web page</p>
+            <input type="button" class="input-1" value="Learn HTML" class="input-1">
+            <input type="button" value="HTML References">
+        </div>
+        <div class="text-2">
+            <h1>HTML Example:</h1>
+            <div class="code">
+                &lt;!DOCTYPE <span style="color:red">html</span>&gt;<br>
+                &lt;html&gt;<br>
+                &lt;title&gt;HTML Tutorial&lt;/title&gt;<br>
+                &lt;body&gt;<br><br>
+                &lt;h1&gt;This is a heading&lt;/h1&gt;<br>
+                &lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;
+            </div>
+            <input type="button" class="input-2" value="Try it Yourself">
+        </div>
+    </section>
+    <!-- section 2 -->
+     <section style="background-color: #fff3a4;">
+        <div class="text">
+            <h1>CSS</h1>
+            <p>The language for styling web pages</p>
+            <input type="button" value="Learn Css" class="input-1">
+            <input type="button" value="Css References">
+            <input type="button" value="Get certifid" class="input-3">
+        </div>
+        <div class="text-2">
+            <h1>CSS Example:</h1>
+            <div class="code">
+                body {background-color:lightblue;} <br>
+                h1 color:white;text-alighn:center;<br>
+                p font-family:verdana;<br>
+            </div>
+            <input type="button" class="input-2" value="Try it Yourself">
+        </div>
+     </section>
+     <!-- section 3 -->
+      <section style="background-color: rgb(13,23,33);">
+        <div class="text-5">
+            <h1>JavaScript</h1>
+            <p>The language for programming web pages</p>
+            <input type="button" value="Learn Javascript" class="input-1">
+            <input type="button" value="JavaScript References">
+        </div>
+        <div class="text-2">
+            <h1>JavaScript Example:</h1>
+            <div class="code">
+                &lt;!DOCTYPE <span style="color:red">html</span>&gt;<br>
+                &lt;html&gt;<br>
+                &lt;title&gt;HTML Tutorial&lt;/title&gt;<br>
+                &lt;body&gt;<br><br>
+                &lt;h1&gt;This is a heading&lt;/h1&gt;<br>
+                &lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;
+            </div>
+            <input type="button" class="input-2" value="Try it Yourself">
+        </div>
+      </section>
+      <!-- section 4 -->
+       <section style="background-color: rgb(32, 32, 32);" id="section4">
+        <div class="PHP">
+            <h1>PHP</h1>
+            <span>A web server programming language</span>
+            <input type="button" value="Learn PHP">
+        </div>
+        <div class="jQuery">
+            <h1>jQuery</h1>
+            <span>A JS library for developing web pages</span>
+            <input type="button" value="Learn jQuery">
+        </div>
+        <div class="Java">
+            <h1>Java</h1>
+            <span>A programming language</span>
+            <input type="button" value="Learn Java">
+        </div>
+        <div class="Cpp">
+            <h1>C++</h1>
+            <span>A programming language</span>
+            <input type="button" value="Learn C++">
+        </div>
+       </section>
+       <!-- section 5 -->
+        <footer id="section5" style="background-color: #282A35;">
+            <div>
+                <ul>
+                    <li>Top Tutorials</li>
+                    <li>HTML Tutorial</li>
+                    <li>CSS Tutorial</li>
+                    <li>JavaScript Tutorial</li>
+                    <li>Java Tutorial</li>
+                    <li>C++ Tutorial</li>
+                    <li>PHP Tutorial</li>
+                    <li>jQuery Tutorial</li>
+                </ul>
+                <ul>
+                    <li>Top References</li>
+                    <li>HTML Reference</li>
+                    <li>CSS Reference</li>
+                    <li>Bootstrap Reference</li>
+                    <li>JavaScript Reference</li>
+                    <li>PHP Reference</li>
+                    <li>Java Reference</li>
+                    <li>jQuery Reference</li>
+                    
+                </ul>
+                <ul>
+                    <li>Top Examples</li>
+                    <li>HTML Examples</li>
+                    <li>CSS Examples</li>
+                    <li>JavaScript Examples</li>
+                    <li>Bootstrap Examples</li>
+                    <li>PHP Examples</li>
+                    <li>Java Examples</li>
+                    <li>jQuery Examples</li>
+                </ul>
+                <ul>
+                    <li>Get Certified</li>                    
+                    <li>HTML Certificate</li>
+                    <li>CSS Certificate</li>
+                    <li>Front End Certificate</li>
+                    <li>PHP Certificate</li>
+                    <li>Java Certificate</li>
+                    <li>C++ Certificate</li>
+                    <li>jQuery Certficate</li>
+                </ul>
+            </div>
+        </footer>
+</body>
+</html>
