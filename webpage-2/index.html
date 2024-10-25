@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+        font-family: arial;
+    }
+    body{
+        background-image: url(pexels-francesco-ungaro-998641.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        background-blend-mode: multiply;
+        background-color: rgb(95, 95, 95);
+        font-size: 12px;
+        overflow: hidden;
+    }
+
+    header ul li {
+        position: relative;
+        text-decoration: none;
+        list-style: none;
+        cursor: pointer;
+        display: inline-block;
+        top: 50px;
+        left: 560px;
+        margin: 0 54px;
+        font-size: 1.5rem;
+    }
+    header ul li a{
+        text-decoration: none;
+    }
+    
+    header ul li a:after{
+        position: absolute;
+        background: yellow;
+        content: "";
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: -7px;
+        transition: all 0.5s;
+        text-decoration: none;
+    }
+    header ul li a:hover:after{
+        width: 100%;
+    }
+    header img{
+        position: absolute;
+        top: 30px;
+        left: 100px;
+        width: 230px;
+        height: 50px;
+    }
+    .section1  {
+        text-align: center;
+        margin-top: 250px;
+  
+    }
+    section main div{
+        font-size: 1.2rem;
+    }
+    section h1{
+        margin-bottom: 30px;
+        font-size:4.8rem;
+    }
+    section button {
+        margin: 45px 20px;
+        border: 1px solid yellow;
+        background-color: black;
+        border-radius: 25px;
+        padding: 20px 50px;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <img src="log.png" alt="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Bedroom</a></li>
+            <li><a href="#">Dinigroom</a></li>
+            <li><a href="#">kitchen</a></li>
+            <li><a href="#">Backyard</a></li>
+        </ul>
+    </nav>
+    </header>
+    <section class="section1">
+        <main>
+                             <h1>DESIGN YOUR HOUSE</h1>
+           <div> At homer, we believe that design is more than great functionality and beautiful aesthetics <br>
+        We aim to make your home interiors a reflection of your personality
+        </div>
+    </main>
+        <button>WATCH NOW</button>
+        <button>SUBSCRIBE</button>
+    </section>
+</body>
+</html>
